@@ -10,11 +10,11 @@ client.on('ready', () => {
   console.log('Our bot is ready to go!');
 }); 
 
-client.on("message", msg => {
+client.on("messageDelete", msg => {
   msg.channel.send("Stop deleting messages")
 })
 
-client.on('messageDelete', msg => {
+client.on('message', msg => {
   if(msg.content == 'I love ZambieDags') {
     msg.react('❤️');
   }
